@@ -1,0 +1,4 @@
+getting practise using the touch command
+$ touch <file name with extension>
+//creates a new file with the indicated name and extension
+//in the current local directory
