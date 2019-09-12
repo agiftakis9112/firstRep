@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head> 
+ <style>
+ div,h2,p{color:red; border:2px solid black; width:70%;}
+ 
+ 
+ </style>
+
+</head>
+<body onload="counter();">
+
+<h2>python increment with </h2>
+<p>My First Paragraph.</p>
+
+<button type="button" onclick="buttons();this.innerHTML=Date();">click me and get the calculation and current server date-time:</button>
+<div style="border:2px solid black;"> the current number of visiors we have is: <br><strong><u>click button above
+</u></strong></div>
+<p id="demo" style="text-align:center"></p>
+<a href='test_counter.html' style="color:blue;">click here for refresh counter</a>
+<p id="sec" style="text-align:center"></p> 
+
+<script>
+
+var visitors;
+ visitors=1;
+ function buttons(){
+  ++visitors; 
+ var x=visitors;
+document.getElementById("demo").innerHTML = x;
+document.getElementById("demo").style.boxShadow="5px 10px #888888";
+}
+
+ function counter(){
+
+    var count = localStorage.getItem("count")==null?1:localStorage.getItem("count");
+    count=Number(count)+1;
+    localStorage.setItem("count", count);
+    document.getElementById('sec').innerHTML = count;
+  }
+ 
+</script>
+
+</body>
+</html> 
